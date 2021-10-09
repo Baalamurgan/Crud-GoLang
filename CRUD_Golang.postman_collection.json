@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "de4fbad7-42e9-4bdf-a763-da73b4f7c84e",
+		"name": "Crud_GoLang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Baalamurgan\",\r\n    \"email\": \"baalamurgan2307@gmail.com\",\r\n    \"password\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosturl}}/user",
+							"host": [
+								"{{hosturl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosturl}}/user/1",
+							"host": [
+								"{{hosturl}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"2137b5ab-4c75-419a-9f1e-f776a6bc268b\",\r\n    \"caption\": \"Helolo 1st post\",\r\n\t\"img_url\": \"sampleurl.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosturl}}/posts",
+							"host": [
+								"{{hosturl}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosturl}}/user/1",
+							"host": [
+								"{{hosturl}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Posts from Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hosturl",
+			"value": "http://localhost:8001"
+		}
+	]
+}
